@@ -56,10 +56,13 @@
 <form action="" class ='hidden' id='submit-form'>
   
     <label for="author">author</label>
-    <input placeholder="author's name">
+    <input placeholder="author's name" id="create-author">
 
     <label for="title">title</label>
-    <input placeholder="title of story">
+    <input placeholder="title of story" id="create-title">
+
+    <label for="url">url</label>
+    <input placeholder="story url" id="create-url" type="url" >
     
 <button type='submit'>submit</button>
 </form>
@@ -68,7 +71,9 @@
 
   <!-- List of all stories -->
   <ol id="all-stories-list" class="stories-list"></ol>
-
+  
+  <ol id="fav-stories" class="hidden stories-list"></ol>
+  <ol id="my-stories" class="hidden stories-list"></ol>
 </section>
 
 <!-- Login and signup forms -->
@@ -111,7 +116,17 @@
     <button type="submit">create account</button>
   </form>
 </section>
-
+<!-- User profile -->
+<section id="user-profile" class="hidden">
+  <div class="user-profile-box container">
+    <h4>User Profile Info</h4>
+    <section>
+      <div>Name: <span id="profile-name">Name:</span></div>
+      <div>Username: <span id="profile-username">Username:</span></div>
+      <div>Account Created: <span id="profile-account-date"></span></div>
+    </section>
+  </div>
+</section>
 <!-- Library JS & our JS -->
 <script src="https://unpkg.com/jquery"></script>
 <script src="https://unpkg.com/axios/dist/axios.js"></script>
