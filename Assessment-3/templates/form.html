@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}converter form{% endblock %}
+
+{% block content %}
+    
+    <form action="/convert">
+        <h3>Valid Currency codes: {{codes}}</h3>
+        <p>Convert From:</p>
+        <input type= 'text'  name='convert_from'>
+        <p>Convert To:</p>
+        <input type= 'text'  name='convert_to'>
+        <p>Amount</p>
+        <input type="number" placeholder="enter amount" step="0.01" min="0"  name='amount'>
+        <button>Convert</button>
+
+    </form>
+
+{% endblock %}
