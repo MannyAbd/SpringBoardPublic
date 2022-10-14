@@ -1,0 +1,23 @@
+#jeopardy {
+  text-align: center;
+  border-collapse: collapse;
+}
+
+#jeopardy th, #jeopardy td {
+ 
+  padding: 5px;
+}
+
+th {
+  inline-size: 150px;
+  height: 2em;
+}
+
+td {
+  inline-size: 150px;
+  height: 4em;
+}
+
+td:hover {
+  cursor: pointer;
+}
